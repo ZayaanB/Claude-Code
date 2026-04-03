@@ -18,6 +18,32 @@ Complete workflow reference for your personalized setup.
 
 ---
 
+## Custom Skills (in ~/.claude/skills/)
+
+| Skill | Trigger | What It Does |
+|-------|---------|--------------|
+| **summarize-changes** | "summarize my changes" | Git diff summary + commit message suggestion |
+| **code-review-lite** | "review this code" | Quick bug/security review with line refs |
+| **explain-concept** | "explain [concept]" | CS concept explanations at first-year level |
+| **test-generator** | "add tests for this" | Generate pytest/Jest unit tests |
+
+---
+
+## Custom Shell Commands
+
+Run these in your terminal:
+
+| Command | Usage |
+|---------|-------|
+| `claude-config new-project <name> <type>` | Scaffold: python, ml, typescript, cpp |
+| `claude-config git-commit-smart` | Interactive commit with auto-message |
+| `claude-config status-update` | Generate weekly status report |
+| `claude-config draft-email <subject>` | Email draft template |
+
+**Reload after setup:** `source ~/.bashrc`
+
+---
+
 ## Agent System - Deep Dive
 
 Agents are specialized sub-processes that handle complex, multi-step tasks autonomously.

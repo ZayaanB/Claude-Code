@@ -63,8 +63,9 @@
 |--------|---------|---------|
 | `new-project.sh` | `claude-config new-project <name> <type>` | Scaffold projects |
 | `git-commit-smart.sh` | `claude-config git-commit-smart` | Smart commits |
-| `setup.sh` | `~/claude_ai/scripts/setup.sh` | Setup on new machine |
-| `status-update.sh` | `~/claude_ai/scripts/status-update.sh` | Generate status updates |
+| `setup.sh` | `claude-config setup` | Setup on new machine |
+| `status-update.sh` | `claude-config status-update` | Generate status updates |
+| `draft-email.sh` | `claude-config draft-email <subject>` | Email drafts |
 
 ## Pro Tips
 

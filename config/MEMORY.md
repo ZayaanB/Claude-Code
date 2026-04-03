@@ -17,6 +17,14 @@ All configuration and memory files are stored in `~/claude_ai/config/`.
 ## Guides
 - [Zayaan Guide](zayaan_guide.md) — Complete workflow reference
 - [MCP Guide](mcp-guide.md) — External tool integrations
+- [Workflow Skills](../docs/workflow-skills-guide.md) — Built-in and custom skills
+
+## Custom Skills
+- [summarize-changes](~/.claude/skills/summarize-changes.skill) — Git change summaries
+- [code-review-lite](~/.claude/skills/code-review-lite.skill) — Quick code reviews
+- [explain-concept](~/.claude/skills/explain-concept.skill) — CS concept explanations
+- [test-generator](~/.claude/skills/test-generator.skill) — Unit test generation
 
 ---
 **Location:** This file is symlinked to `~/.claude/MEMORY.md` for Claude Code access.
+**Reload shell aliases:** `source ~/.bashrc` to use `claude-config` command.
