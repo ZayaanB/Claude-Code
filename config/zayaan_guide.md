@@ -329,5 +329,43 @@ See `docs/github-sync-explained.md` for full details.
 
 ---
 
+## Response Speed - What to Expect
+
+### Fast Responses (No Tool Calls)
+| Request Type | Example | Expected Speed |
+|--------------|---------|----------------|
+| Concept explanations | "What is polymorphism?" | Instant |
+| Quick opinions | "Which approach is better?" | Instant |
+| Simple yes/no | "Is this a security issue?" | Instant |
+
+### Medium Speed (1-3 Tool Calls)
+| Request Type | Example | Expected Speed |
+|--------------|---------|----------------|
+| Read one file | "What's in config.json?" | 1-3 seconds |
+| Simple search | "Find 'auth' in src/" | 2-5 seconds |
+| Single edit | "Fix this typo" | 2-5 seconds |
+
+### Slower (Deep Work - Intentional)
+| Request Type | Example | Expected Speed |
+|--------------|---------|----------------|
+| Codebase exploration | "Find all auth patterns" | 10-30 seconds (Explore agent) |
+| Multi-file refactoring | "Refactor auth module" | 30-60 seconds (General agent) |
+| Architecture planning | "Design microservices" | 30-60 seconds (Plan agent) |
+| Complex debugging | "Fix this bug across files" | 30-60 seconds |
+
+### How I Decide
+- **Simple questions** → Direct answer, no tools
+- **Need file content** → Read tool, then answer
+- **Broad search** → Spawn Explore agent (background)
+- **Complex task** → Spawn Plan/General agent with full context
+
+### Tips for Faster Responses
+1. Use `/fast` for quick iterations
+2. Be specific: "Read config.json" vs "Find my config"
+3. For deep work, say "Take your time to research this"
+4. Use `/model haiku` for fastest responses
+
+---
+
 *Last updated: 2026-04-02*
 *Generated for: Zayaan (CS student, Software/AI Engineering track)*
