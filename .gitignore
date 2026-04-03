@@ -1,0 +1,33 @@
+# Claude Code - Sensitive Data
+*.env
+*.credentials
+*.secret
+*.key
+
+# Do not commit API keys or tokens
+NVIDIA_NIM_API_KEY=
+CLAUDE_API_KEY=
+
+# Ignore large files and notes (keep config portable)
+*.pdf
+*.txt
+*.md
+!CLAUDE.md
+!docs/**/*.md
+!config/memory/**/*.md
+!MEMORY.md
+
+# Ignore project-specific files
+Website/
+*.ipynb
+.ipynb_checkpoints/
+
+# Ignore IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

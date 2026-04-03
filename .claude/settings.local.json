@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:zayaanb.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s -L \"https://zayaanb.github.io/ZayaanBhanwadia/\")",
+      "Skill(update-config)",
+      "WebSearch",
+      "WebFetch(domain:www.swebench.com)",
+      "WebFetch(domain:swebench.com)",
+      "WebFetch(domain:openai.com)",
+      "Bash(curl -s \"https://api.allorigins.win/raw?url=https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard\"222)",
+      "WebFetch(domain:livecodebench.github.io)",
+      "Bash(curl -sL \"https://evals-backend.apps.uc6r.iit-managed.cluster.lmsys.org/api/leaderboard\"222222)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/SWE-bench/SWE-bench/main/README.md\")",
+      "WebFetch(domain:swe-bench.github.io)",
+      "Bash(curl -sL \"https://openai.com/index/introducing-swe-bench-verified/\")",
+      "Bash(curl -sL \"https://artificialanalysis.ai/\")",
+      "Bash(curl -sL \"https://artificialanalysis.ai/api/models\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/JoaquinGMA/swe-bench-results/main/README.md\")",
+      "Bash(curl -sL \"https://huggingface.co/api/spaces/lmsys/chatbot-arena-leaderboard\")",
+      "Bash(curl -sL \"https://huggingface.co/datasets/lmarena-ai/arena-leaderboard/raw/main/arena_hard_auto_leaderboard_v0.1.csv\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/openai/simple-evals/main/README.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/SWE-agent/SWE-agent/main/README.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/artificialanalysis-ai/models/main/README.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/NousResearch/LLM-Leaderboard/main/README.md\")",
+      "Bash(curl -sL \"https://enigma-agent.com/\")",
+      "WebFetch(domain:www.reddit.com)",
+      "Bash(chmod +x ~/claude_ai/scripts/*.sh)",
+      "Bash(ls ~/claude_ai/*.md ~/claude_ai/*.txt)"
+    ]
+  }
+}
