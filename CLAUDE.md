@@ -1,1 +1,0 @@
-/home/zayaan/claude_ai/config/CLAUDE.md
