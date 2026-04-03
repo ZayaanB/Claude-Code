@@ -1,8 +1,12 @@
 {
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "$docs": "https://code.claude.com/docs/en/keybindings",
   "bindings": [
     {
-      "key": "ctrl+space",
-      "command": "submit"
+      "context": "Chat",
+      "bindings": {
+        "ctrl+space": "chat:submit"
+      }
     }
   ]
 }
