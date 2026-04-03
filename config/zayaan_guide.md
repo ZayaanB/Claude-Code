@@ -329,6 +329,68 @@ See `docs/github-sync-explained.md` for full details.
 
 ---
 
+## MCP (Model Context Protocol) - External Integrations
+
+MCP servers connect Claude to databases, APIs, and external tools.
+
+### Quick Start
+```bash
+# Install Node.js if needed
+node --version  # Need 18+
+
+# Create config
+nano ~/.claude/mcp_servers.json
+
+# Add server (example: filesystem)
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path"],
+      "env": {}
+    }
+  }
+}
+
+# Restart Claude Code
+```
+
+### Available Servers
+
+| Server | Command | Use Case |
+|--------|---------|----------|
+| **filesystem** | `npx -y @modelcontextprotocol/server-filesystem /path` | Access specific directories |
+| **github** | `npx -y @modelcontextprotocol/server-github` | GitHub API (needs GITHUB_TOKEN) |
+| **sqlite** | `npx -y @modelcontextprotocol/server-sqlite db.db` | Query SQLite databases |
+| **postgres** | `npx -y @modelcontextprotocol/server-postgres` | PostgreSQL (needs DATABASE_URL) |
+| **brave** | `npx -y @modelcontextprotocol/server-brave-search` | Web search (needs API key) |
+| **git** | `npx -y @modelcontextprotocol/server-git` | Git operations |
+
+### Examples
+
+**GitHub Integration:**
+```bash
+export GITHUB_TOKEN="ghp_your-token"
+```
+Then ask: "Fetch PR #42 from ZayaanB/Claude-Code"
+
+**Database Query:**
+```json
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite", "/path/to/db.db"]
+    }
+  }
+}
+```
+Then ask: "What tables are in this database?"
+
+**See full guide:** `config/mcp-guide.md` for detailed setup, examples, and security notes.
+
+---
+
 ## Response Speed - What to Expect
 
 ### Fast Responses (No Tool Calls)

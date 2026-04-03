@@ -14,5 +14,9 @@ All configuration and memory files are stored in `~/claude_ai/config/`.
 ## References
 - [External Resources](memory/reference_resources.md) — Links to important resources
 
+## Guides
+- [Zayaan Guide](zayaan_guide.md) — Complete workflow reference
+- [MCP Guide](mcp-guide.md) — External tool integrations
+
 ---
 **Location:** This file is symlinked to `~/.claude/MEMORY.md` for Claude Code access.

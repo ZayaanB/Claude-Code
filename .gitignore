@@ -16,6 +16,7 @@ CLAUDE_API_KEY=
 !docs/**/*.md
 !config/memory/**/*.md
 !config/zayaan_guide.md
+!config/mcp-guide.md
 !MEMORY.md
 
 # Ignore project-specific files
