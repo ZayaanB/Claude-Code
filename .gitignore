@@ -1,4 +1,5 @@
 # Claude Code - Sensitive Data
+.env
 *.env
 *.credentials
 *.secret
