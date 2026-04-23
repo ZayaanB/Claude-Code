@@ -10,6 +10,7 @@ All configuration and memory files are stored in `~/claude_ai/config/`.
 
 ## Projects
 - [Active Projects](memory/project_active.md) — Current work and deadlines
+- [Claude Harness](memory/project_claude_harness.md) — This workspace: config, scripts, ContextSync extension
 
 ## References
 - [External Resources](memory/reference_resources.md) — Links to important resources

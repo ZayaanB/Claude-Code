@@ -1,4 +1,5 @@
 {
+  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "WebFetch(domain:zayaanb.github.io)",
@@ -7,7 +8,11 @@
       "WebSearch",
       "WebFetch(domain:www.cs.utoronto.ca)",
       "Bash(chmod +x ~/claude_ai/scripts/*.sh)",
-      "Bash(ls ~/claude_ai/*.md ~/claude_ai/*.txt)"
+      "Bash(ls ~/claude_ai/*.md ~/claude_ai/*.txt)",
+      "WebFetch(domain:www.w3schools.com)",
+      "Bash(xargs -n1 basename)",
+      "Bash(xargs -n1 basename -a)",
+      "Bash(grep -iE \"^unique|^view|^like$|^default$|^intersect$|^except$\")"
     ]
   }
 }
