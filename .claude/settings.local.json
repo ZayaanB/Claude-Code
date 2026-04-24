@@ -1,5 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "WebFetch(domain:zayaanb.github.io)",
@@ -12,7 +11,9 @@
       "WebFetch(domain:www.w3schools.com)",
       "Bash(xargs -n1 basename)",
       "Bash(xargs -n1 basename -a)",
-      "Bash(grep -iE \"^unique|^view|^like$|^default$|^intersect$|^except$\")"
+      "Bash(grep -iE \"^unique|^view|^like$|^default$|^intersect$|^except$\")",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/home/zayaan/Documents/Zayaan-Notes/.obsidian/graph.json'\\)\\)\")"
     ]
-  }
+  },
+  "alwaysThinkingEnabled": true
 }

@@ -5,13 +5,13 @@ model_list:
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
 
-  - model_name: "claude-opus-4-6"
+  - model_name: "claude-opus-4-7"
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
 
-  - model_name: claude-opus-4-6[1m]
+  - model_name: claude-opus-4-7[1m]
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY
