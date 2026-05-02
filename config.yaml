@@ -1,27 +1,35 @@
 model_list:
   - model_name: claude-sonnet-4-6
     litellm_params:
-      model: nvidia_nim/moonshotai/kimi-k2.5
+      model: nvidia_nim/moonshotai/kimi-k2.6
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
+      drop_params: true
+      additional_drop_params: ["output_config"]
 
   - model_name: "claude-opus-4-7"
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
+      drop_params: true
+      additional_drop_params: ["output_config"]
 
   - model_name: claude-opus-4-7[1m]
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
+      drop_params: true
+      additional_drop_params: ["output_config"]
 
   - model_name: claude-haiku-4-5-20251001
     litellm_params:
       model: nvidia_nim/z-ai/glm-5.1
       api_key: os.environ/NVIDIA_NIM_API_KEY
       max_tokens: 65536
+      drop_params: true
+      additional_drop_params: ["output_config"]
 
 litellm_settings:
   drop_params: true

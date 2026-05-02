@@ -12,7 +12,9 @@
       "Bash(xargs -n1 basename)",
       "Bash(xargs -n1 basename -a)",
       "Bash(grep -iE \"^unique|^view|^like$|^default$|^intersect$|^except$\")",
-      "Bash(python3 -c \"import json; json.load\\(open\\('/home/zayaan/Documents/Zayaan-Notes/.obsidian/graph.json'\\)\\)\")"
+      "Bash(python3 -c \"import json; json.load\\(open\\('/home/zayaan/Documents/Zayaan-Notes/.obsidian/graph.json'\\)\\)\")",
+      "Bash(sqlite3 *)",
+      "Bash(python3 *)"
     ]
   },
   "alwaysThinkingEnabled": true

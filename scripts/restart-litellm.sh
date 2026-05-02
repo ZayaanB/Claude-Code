@@ -1,5 +1,5 @@
 #!/bin/bash
-# Restart the LiteLLM container with GLM 5.1
+# Restart the LiteLLM container with the updated config.yaml
 # This script stops/removes the old container and starts a new one
 
 # Load environment variables from .env file if it exists
@@ -16,7 +16,7 @@ fi
 echo "Stopping and removing old liteLLM container..."
 docker stop litellm-nim && docker rm litellm-nim
 
-echo "Starting new LiteLLM container with GLM 5.1..."
+echo "Starting new LiteLLM container..."
 docker run -d \
   -p 8081:4000 \
   -e NVIDIA_NIM_API_KEY="$NVIDIA_NIM_API_KEY" \
