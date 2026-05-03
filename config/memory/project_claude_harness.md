@@ -1,6 +1,6 @@
 ---
 name: Claude Harness Project
-description: Personal Claude Code configuration, memory system, and VS Code extension project
+description: Personal Claude Code configuration and memory system
 type: project
 ---
 
@@ -16,15 +16,12 @@ type: project
 | `config/` | Core configuration - CLAUDE.md, settings.json, MEMORY.md, zayaan_guide.md, mcp-guide.md |
 | `config/memory/` | Persistent memories: user_role.md, feedback_preferences.md, project_active.md, reference_resources.md |
 | `scripts/` | Utility scripts: new-project.sh, git-commit-smart.sh, status-update.sh, draft-email.sh |
-| `docs/` | Documentation: workflow-skills-guide.md, github-sync-explained.md, automated-workflow.md |
-| `srccode/` | (empty - intended for source code storage) |
-| `context-sync/` | VS Code extension: ContextSync - collaborative AI context sharing via Obsidian/OneDrive |
+
 
 ## Purposes
 
 1. **Claude Code Harness:** Personalized configuration, hooks, keybindings, and memory system
-2. **ContextSync Extension:** VS Code extension for team AI context sharing (TypeScript, publishes to marketplace)
-3. **Workflow Automation:** Scripts for project scaffolding, git commits, status updates
+2. **Workflow Automation:** Scripts for project scaffolding, git commits, status updates
 
 ## Sources of Information
 

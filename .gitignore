@@ -21,8 +21,7 @@ CLAUDE_API_KEY=
 !MEMORY.md
 
 # Ignore project-specific files
-Website/
-context-sync/
+
 *.ipynb
 .ipynb_checkpoints/
 

@@ -18,7 +18,7 @@ All configuration and memory files are stored in `~/claude_ai/config/`.
 ## Guides
 - [Zayaan Guide](zayaan_guide.md) — Complete workflow reference
 - [MCP Guide](mcp-guide.md) — External tool integrations
-- [Workflow Skills](../docs/workflow-skills-guide.md) — Built-in and custom skills
+
 
 ## Custom Skills
 - [summarize-changes](~/.claude/skills/summarize-changes.skill) — Git change summaries
