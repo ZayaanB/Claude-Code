@@ -15,7 +15,7 @@ type: project
 |------|----------|
 | `config/` | Core configuration - CLAUDE.md, settings.json, MEMORY.md, zayaan_guide.md, mcp-guide.md |
 | `config/memory/` | Persistent memories: user_role.md, feedback_preferences.md, project_active.md, reference_resources.md |
-| `scripts/` | Utility scripts: new-project.sh, git-commit-smart.sh, status-update.sh, draft-email.sh |
+| `scripts/` | Utility scripts: setup.sh, restart-litellm.sh, git-commit-smart.sh, status-update.sh, draft-email.sh |
 
 
 ## Purposes
@@ -40,7 +40,7 @@ type: project
 - **Collaborative:** Discuss options before coding
 - **Simple questions** → Direct answer without tool calls
 - **File content** → Read tool, then answer
-- **Complex tasks** → Spawn agents (Explore/Plan/general-purpose)
+- **Complex tasks** → Enter planning mode
 
 ## Rules
 
@@ -56,7 +56,6 @@ type: project
 
 | Need | Use |
 |------|-----|
-| New project | `claude-config new-project <name> <type>` (python, ml, typescript, cpp) |
 | Smart commit | `claude-config git-commit-smart` |
 | Status update | `claude-config status-update` |
 

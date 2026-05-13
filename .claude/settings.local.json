@@ -1,20 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:zayaanb.github.io)",
-      "WebFetch(domain:raw.githubusercontent.com)",
-      "Skill(update-config)",
       "WebSearch",
-      "WebFetch(domain:www.cs.utoronto.ca)",
-      "Bash(chmod +x ~/claude_ai/scripts/*.sh)",
-      "Bash(ls ~/claude_ai/*.md ~/claude_ai/*.txt)",
-      "WebFetch(domain:www.w3schools.com)",
-      "Bash(xargs -n1 basename)",
-      "Bash(xargs -n1 basename -a)",
-      "Bash(grep -iE \"^unique|^view|^like$|^default$|^intersect$|^except$\")",
-      "Bash(python3 -c \"import json; json.load\\(open\\('/home/zayaan/Documents/Zayaan-Notes/.obsidian/graph.json'\\)\\)\")",
-      "Bash(sqlite3 *)",
-      "Bash(python3 *)"
+      "Bash(chmod +x ~/claude_ai/scripts/*.sh)"
     ]
   },
   "alwaysThinkingEnabled": true

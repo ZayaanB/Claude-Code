@@ -1,20 +1,21 @@
 #!/bin/bash
-# Restart the LiteLLM container with the updated config.yaml
-# This script stops/removes the old container and starts a new one
+# Restarts the LiteLLM proxy after config.yaml updates.
+# Recreates the container with the latest configuration.
 
-# Load environment variables from .env file if it exists
+# Load environment variables from .env if it exists.
 if [ -f "/home/zayaan/claude_ai/.env" ]; then
-  export $(grep -v '^#' /home/zayaan/claude_ai/.env | xargs)
+  export $(grep -v '^#' /home/zayaan/claude_ai/.env | xargs -d '\n')
 fi
 
-# Check if API key is set
+# Verify NVIDIA_NIM_API_KEY is configured.
 if [ -z "$NVIDIA_NIM_API_KEY" ]; then
   echo "Error: NVIDIA_NIM_API_KEY is not set. Please check your .env file."
   exit 1
 fi
 
 echo "Stopping and removing old liteLLM container..."
-docker stop litellm-nim && docker rm litellm-nim
+docker stop litellm-nim >/dev/null 2>&1 || true
+docker rm litellm-nim >/dev/null 2>&1 || true
 
 echo "Starting new LiteLLM container..."
 docker run -d \
