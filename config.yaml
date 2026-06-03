@@ -7,7 +7,7 @@ model_list:
       drop_params: true
       additional_drop_params: ["output_config"]
 
-  - model_name: "claude-opus-4-7"
+  - model_name: "claude-opus-4-8"
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY
@@ -15,7 +15,7 @@ model_list:
       drop_params: true
       additional_drop_params: ["output_config"]
 
-  - model_name: claude-opus-4-7[1m]
+  - model_name: claude-opus-4-8[1m]
     litellm_params:
       model: nvidia_nim/minimaxai/minimax-m2.7
       api_key: os.environ/NVIDIA_NIM_API_KEY

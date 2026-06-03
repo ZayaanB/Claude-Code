@@ -36,8 +36,6 @@ Run these from your terminal:
 | Script | Command | Use Case |
 |--------|---------|----------|
 | `git-commit-smart.sh` | `~/claude_ai/scripts/git-commit-smart.sh` | Smart git commits |
-| `status-update.sh` | `~/claude_ai/scripts/status-update.sh` | Generate status updates |
-| `draft-email.sh` | `~/claude_ai/scripts/draft-email.sh <subject>` | Draft emails |
 | `setup.sh` | `~/claude_ai/scripts/setup.sh` | Setup on new machine |
 | `restart-litellm.sh` | `~/claude_ai/scripts/restart-litellm.sh` | Restart LiteLLM proxy container |
 
@@ -221,8 +219,6 @@ For complex tasks, I use EnterPlanMode to:
 │       └── reference_resources.md
 ├── scripts/
 │   ├── git-commit-smart.sh
-│   ├── status-update.sh
-│   ├── draft-email.sh
 │   ├── restart-litellm.sh
 │   └── setup.sh
 ├── CLAUDE.md               # Project instructions
@@ -347,5 +343,5 @@ Then ask: "What tables are in this database?"
 
 ---
 
-*Last updated: 2026-05-13*
+*Last updated: 2026-06-03*
 *Generated for: Zayaan (CS student, Software/AI Engineering track)*
