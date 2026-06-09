@@ -19,6 +19,7 @@ CLAUDE_API_KEY=
 !config/zayaan_guide.md
 !config/mcp-guide.md
 !MEMORY.md
+!README.md
 
 # Ignore project-specific files
 *.ipynb

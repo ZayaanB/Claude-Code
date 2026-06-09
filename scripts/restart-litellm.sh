@@ -2,9 +2,12 @@
 # Restarts the LiteLLM proxy after config.yaml updates.
 # Recreates the container with the latest configuration.
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(dirname "$SCRIPT_DIR")"
+
 # Load environment variables from .env if it exists.
-if [ -f "/home/zayaan/claude_ai/.env" ]; then
-  export $(grep -v '^#' /home/zayaan/claude_ai/.env | xargs -d '\n')
+if [ -f "$BASE_DIR/.env" ]; then
+  export $(grep -v '^#' "$BASE_DIR/.env" | xargs -d '\n')
 fi
 
 # Verify NVIDIA_NIM_API_KEY is configured.
@@ -21,7 +24,7 @@ echo "Starting new LiteLLM container..."
 docker run -d \
   -p 8081:4000 \
   -e NVIDIA_NIM_API_KEY="$NVIDIA_NIM_API_KEY" \
-  -v /home/zayaan/claude_ai/config.yaml:/app/config.yaml \
+  -v "$BASE_DIR/config.yaml:/app/config.yaml" \
   --name litellm-nim \
   --restart always \
   docker.litellm.ai/berriai/litellm:main-stable \

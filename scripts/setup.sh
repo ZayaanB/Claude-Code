@@ -39,10 +39,23 @@ echo "  ✓ Symlinks created"
 # Add convenience alias to ~/.bashrc.
 echo "Adding alias to ~/.bashrc..."
 if ! grep -q "claude-config" ~/.bashrc 2>/dev/null; then
-    echo 'alias claude-config="~/claude_ai/scripts"' >> ~/.bashrc
+    echo "alias claude-config=\"$SCRIPT_DIR\"" >> ~/.bashrc
     echo "  ✓ Alias added"
 else
     echo "  ℹ Alias already exists"
+fi
+
+# Add LiteLLM proxy environment variables and claude model alias to ~/.bashrc.
+echo "Adding Claude Code environment variables and alias to ~/.bashrc..."
+if ! grep -q "ANTHROPIC_BASE_URL" ~/.bashrc 2>/dev/null; then
+    echo '' >> ~/.bashrc
+    echo '# Claude Code LiteLLM configuration' >> ~/.bashrc
+    echo 'export ANTHROPIC_BASE_URL="http://localhost:8081"' >> ~/.bashrc
+    echo 'export ANTHROPIC_API_KEY="sk-litellm-dummy-key"' >> ~/.bashrc
+    echo 'alias claude="claude --model claude-sonnet-4-6"' >> ~/.bashrc
+    echo "  ✓ Environment variables and 'claude' alias added"
+else
+    echo "  ℹ Environment variables already exist"
 fi
 
 # Ensure scripts are executable.
