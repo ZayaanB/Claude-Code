@@ -51,7 +51,7 @@ if ! grep -q "ANTHROPIC_BASE_URL" ~/.bashrc 2>/dev/null; then
     echo '' >> ~/.bashrc
     echo '# Claude Code LiteLLM configuration' >> ~/.bashrc
     echo 'export ANTHROPIC_BASE_URL="http://localhost:8081"' >> ~/.bashrc
-    echo 'export ANTHROPIC_API_KEY="sk-litellm-dummy-key"' >> ~/.bashrc
+    echo 'export ANTHROPIC_API_KEY="sk-ant-litellm-dummy-key"' >> ~/.bashrc
     echo 'alias claude="claude --model claude-sonnet-4-6"' >> ~/.bashrc
     echo "  ✓ Environment variables and 'claude' alias added"
 else
