@@ -12,7 +12,6 @@ CLAUDE_API_KEY=
 # Ignore large files and notes (keep config portable)
 *.pdf
 *.txt
-*.md
 !CLAUDE.md
 !docs/**/*.md
 !config/memory/**/*.md
