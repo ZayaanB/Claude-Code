@@ -2,12 +2,23 @@
 # Restarts the LiteLLM proxy after config.yaml updates.
 # Recreates the container with the latest configuration.
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 
 # Load environment variables from .env if it exists.
 if [ -f "$BASE_DIR/.env" ]; then
-  export $(grep -v '^#' "$BASE_DIR/.env" | xargs -d '\n')
+  while IFS= read -r line || [ -n "$line" ]; do
+    # Skip comments and empty lines
+    case "$line" in
+      [#]*) continue ;;
+      "") continue ;;
+    esac
+    # Strip carriage return (\r) for WSL/Windows compatibility
+    cleaned_line=$(echo "$line" | tr -d '\r')
+    if [ -n "$cleaned_line" ]; then
+      export "$cleaned_line"
+    fi
+  done < "$BASE_DIR/.env"
 fi
 
 # Verify NVIDIA_NIM_API_KEY is configured.
